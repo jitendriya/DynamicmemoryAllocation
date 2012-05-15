@@ -4,8 +4,8 @@
 int main(int argc,char* argv[])
 {
 	int *arr;
-	int n = 10,i,sum = 0;
-	arr = (int *)malloc(sizeof(int)*n);
+	int n = 5,i,sum = 0;
+	arr = (void *)malloc(sizeof(int)*n);
 	printf("\n default values of arr:");
 	for(i = 0; i < n; i++)
 	printf("\n %d",arr[i]);
@@ -19,7 +19,7 @@ int main(int argc,char* argv[])
 	sum += arr[i];
 	}
 	printf("\n sum of list:%d",sum);
-
+	free(arr);
 	return 0;
 	
 }
